@@ -2,3 +2,14 @@
 docker exec -it pg17 bash
 psql -U user -d lab 
 
+教材の更新
+
+git fetch upstream
+git switch main
+git merge upstream/main
+
+演習や自分の取り組みをリモートリポジトリに保存
+
+git add .
+git commit -m "任意のコミットメッセージ"
+git push

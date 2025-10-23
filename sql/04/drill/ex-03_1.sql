@@ -6,8 +6,9 @@ FROM
     s_characters
 ORDER BY
     CASE
-        WHEN 'Yamato' THEN 1
+        WHEN guild = 'Yamato' THEN 1
         WHEN guild IS NULL THEN 2
-        ELSE LOWER(guild)
-    END DESC,
-    level ASC;
+        ELSE 3
+    END,
+    LOWER(guild),
+    level DESC;
